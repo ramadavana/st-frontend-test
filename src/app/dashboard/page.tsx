@@ -1,5 +1,3 @@
-"use client";
-
 import { useRouter } from "next/navigation";
 import { FaArrowRight } from "react-icons/fa6";
 
