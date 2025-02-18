@@ -55,12 +55,12 @@ const CharacterList = () => {
     switch (status) {
       case "Alive":
         return "bg-black";
-      case "unknown":
-        return "bg-yellow-600";
       case "Dead":
         return "bg-red-600";
+      case "unknown":
+        return "bg-yellow-600";
       default:
-        return "";
+        return "bg-black";
     }
   };
 
