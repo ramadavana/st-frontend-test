@@ -54,13 +54,13 @@ const CharacterList = () => {
   const getStatusClass = (status: string) => {
     switch (status) {
       case "Alive":
-        return "bg-black";
+        return "group-hover:bg-black";
       case "Dead":
-        return "bg-red-600";
+        return "group-hover:bg-red-600";
       case "unknown":
-        return "bg-yellow-600";
+        return "group-hover:bg-yellow-600";
       default:
-        return "bg-black";
+        return "group-hover:bg-black";
     }
   };
 
@@ -110,9 +110,9 @@ const CharacterList = () => {
                     className="rounded-2xl transition-transform duration-300"
                   />
                   <div
-                    className={`flex flex-col absolute rounded-2xl inset-0 opacity-0 bg-transparent group-hover:bg-opacity-60 group-hover:opacity-100 transition-all duration-300 items-center justify-center ${getStatusClass(
+                    className={`flex flex-col absolute rounded-2xl inset-0 opacity-0 ${getStatusClass(
                       character.status
-                    )}`}>
+                    )} group-hover:bg-opacity-60 group-hover:opacity-100 transition-all duration-300 items-center justify-center`}>
                     <div className="flex flex-col gap-4 items-center justify-center text-center">
                       <span className="text-3xl font-bold">{character.name}</span>
                       <span className="font-bold">{character.status}</span>
