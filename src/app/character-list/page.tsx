@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import Pagination from "../../components/Pagination";
+import Pagination from "../components/Pagination";
 import { useRouter } from "next/navigation";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 

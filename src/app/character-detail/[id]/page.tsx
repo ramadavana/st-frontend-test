@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Image from "next/image";
-import { FormatDate } from "@/utils/FormatDate";
+import { FormatDate } from "@/app/utils/FormatDate";
 
 interface CharacterDetail {
   id: number;

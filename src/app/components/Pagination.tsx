@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 interface PaginationProps {
@@ -20,6 +20,12 @@ const Pagination: React.FC<PaginationProps> = ({
   hasNext,
   displayCount,
 }) => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
     <div className="flex justify-between w-full items-center">
       <p>
@@ -27,7 +33,7 @@ const Pagination: React.FC<PaginationProps> = ({
       </p>
 
       <div className="flex gap-4 items-center justify-center">
-        {window.innerWidth >= 768 && <p>{displayCount}</p>}
+        {isClient && window.innerWidth >= 768 && <p>{displayCount}</p>}
 
         <button
           onClick={() => onPageChange(currentPage - 1)}
