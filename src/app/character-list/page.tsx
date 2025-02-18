@@ -57,8 +57,10 @@ const CharacterList = () => {
         return "bg-black";
       case "unknown":
         return "bg-yellow-600";
-      default:
+      case "Dead":
         return "bg-red-600";
+      default:
+        return "";
     }
   };
 
